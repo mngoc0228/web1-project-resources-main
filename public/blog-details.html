@@ -105,7 +105,7 @@
             </form>
           </div>
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
               <a href="index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a>
             </li>
@@ -126,21 +126,21 @@
               <a href="contact.html"
                 class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Contact</a>
             </li>
-            <li>
+            <li class="isLogout">
               <a href="register.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogout">Register</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Register</a>
             </li>
-            <li>
-              <a href="#.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogin">Profile</a>
+            <li class="isLogin">
+              <a href="#.html" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Profile</a>
             </li>
-            <li>
+            <li class="isLogout">
               <a href="login.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogout">Login</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Login</a>
             </li>
-            <li>
+            <li class="isLogin">
               <a href="login.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogin logout-btn">Logout</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent logout-btn">Logout</a>
             </li>
           </ul>
         </div>
@@ -175,7 +175,7 @@
   <!--Footer-->
   <footer class="w-full bg-[url('images/bg-footer.gif')] bg-repeat bg-gray-600 text-white text-center py-4">
     <nav class="max-w-7xl mx-auto flex items-center justify-center p-4">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0">
         <li>
           <a href="index.html"
             class="block py-2 px-3 text-white rounded md:bg-transparent md:text-fg-brand md:p-0">Home</a>
@@ -197,21 +197,21 @@
           <a href="contact.html"
             class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent">Contact</a>
         </li>
-        <li>
+        <li class="isLogout">
           <a href="register.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent isLogout">Register</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Register</a>
         </li>
-        <li>
-          <a href="register.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent isLogin">Profile</a>
+        <li class="isLogin">
+          <a href="#.html" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Profile</a>
         </li>
-        <li>
+        <li class="isLogout">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-pink-300! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogout">Login</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Login</a>
         </li>
-        <li>
+        <li class="isLogin">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-pink-300! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogin logout-btn">Logout</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent logout-btn">Logout</a>
         </li>
       </ul>
       </div>

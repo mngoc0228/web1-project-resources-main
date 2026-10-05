@@ -92,7 +92,7 @@
             </svg>
           </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="items-center hidden w-full md:flex md:flex-1 md:justify-center md:order-1" id="navbar-search">
           <div class="relative mt-3 md:hidden">
             <div class="absolute inset-y-0 end-2 flex items-center ps-3 pointer-events-none">
               <svg class="w-4 h-4 text-green-500!" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -106,7 +106,7 @@
               placeholder="Search">
           </div>
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
               <a href="index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0 active"
                 aria-current="page">Home</a>
@@ -127,21 +127,21 @@
               <a href="contact.html"
                 class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Contact</a>
             </li>
-            <li>
+            <li class="isLogout">
               <a href="register.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogout">Register</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Register</a>
             </li>
-            <li>
+            <li class="isLogin">
               <a href="#.html" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogin">Profile</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Profile</a>
             </li>
-            <li>
+            <li class="isLogout">
               <a href="login.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogout">Login</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Login</a>
             </li>
-            <li>
+            <li class="isLogin">
               <a href="login.html"
-                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent isLogin logout-btn">Logout</a>
+                class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent logout-btn">Logout</a>
             </li>
           </ul>
         </div>
@@ -247,7 +247,7 @@
                     w-full px-3 py-2.5 shadow-sm placeholder:text-neutral-400 mb-3" placeholder="john.doe@example.com"
             required />
           <button type="submit" class="text-white bg-neutral-900 box-border border border-transparent hover:bg-neutral-800 focus:ring-4
-                    focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base px-5 py-2.5
+                    focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-b px-5 py-2.5
                     float-end focus:outline-none font-heading text-2xl">SUBSCRIBE
           </button>
         </form>
@@ -291,21 +291,21 @@
           <a href="contact.html"
             class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent">Contact</a>
         </li>
-        <li>
+        <li class="isLogout">
           <a href="register.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent isLogout">Register</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Register</a>
         </li>
-        <li>
-          <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent isLogin">Profile</a>
+        <li class="isLogin">
+          <a href="#.html" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Profile</a>
         </li>
-        <li>
+        <li class="isLogout">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-pink-300! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogout">Login</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Login</a>
         </li>
-        <li>
+        <li class="isLogin">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-pink-300! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent isLogin logout-btn">Logout</a>
+            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent logout-btn">Logout</a>
         </li>
       </ul>
       </div>
