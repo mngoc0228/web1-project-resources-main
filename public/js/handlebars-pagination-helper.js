@@ -1,10 +1,13 @@
-Handlebars.registerHelper('pagination', function(currentPage, totalPage, size, options) {
+Handlebars.registerHelper('pagination', function (currentPage, totalPage, size, options) {
   var startPage, endPage, context;
 
   if (arguments.length === 3) {
     options = size;
     size = 5;
   }
+
+  currentPage = parseInt(currentPage, 10) || 1;
+  totalPage = parseInt(totalPage, 10) || 1;
 
   startPage = currentPage - Math.floor(size / 2);
   endPage = currentPage + Math.floor(size / 2);
@@ -27,6 +30,8 @@ Handlebars.registerHelper('pagination', function(currentPage, totalPage, size, o
     startFromFirstPage: false,
     pages: [],
     endAtLastPage: false,
+    prevPage: Math.max(currentPage - 1, 1),
+    nextPage: Math.min(currentPage + 1, totalPage),
   };
   if (startPage === 1) {
     context.startFromFirstPage = true;

@@ -320,6 +320,7 @@
 
   <!-- HandlebarJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  <script src="js/handlebars-pagination-helper.js"></script>
   <script id="blogs-template" type="text/x-handlebars-template">
 {{#each data.data}}
 
@@ -328,15 +329,16 @@
                     <p class="py-4">by {{#if author}}{{author.name}}{{else}}Anonymous{{/if}} in <a href="blogs.html?category={{category_id}}">{{category.name}}</a> on {{formatDate created_at}} <a href="blog-details.html#comments">Comments {{comment.length}}</a></p>
                     <a href="blog-details.html?id={{id}}"><img src="{{thumbpath}}" alt="{{title}}" class="float-start mb-8 me-8 rounded-xl"></a>
                     <p class="text-justify">{{summary}}</p>
-                    <a href="blogs-details.html?id={{id}}" class="read-more">Read more...</a>
+                    <a href="blog-details.html?id={{id}}" class="read-more">Read more...</a>
                 </div>
                 {{/each}}
                 <!-- Pagination -->
                 
 {{#with data.pagination}}
 <nav aria-label="Page navigation" class="clear-both mt-8 flex justify-center">
+  {{#pagination currentPage pageCount size}}
   <ul class="flex -space-x-px text-sm">
-    {{#unless startFromFirstPage}}
+    {{#unless ../startFromFirstPage}}
     <li>
  <a href="blogs.html?page={{../prevPage}}&category={{../category}}&keyword={{../keyword}}" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-s-base text-sm w-9 h-9 focus:outline-none">
         <span class="sr-only">Previous</span>
@@ -346,20 +348,28 @@
     {{/unless}}
 
     {{#each pages}}
-    <li>
-      <a href="blogs.html?page={{number}}&category={{../category}}" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none {{#if isCurrent}}!bg-cyan-600 !text-white{{/if}}">{{number}}</a>
-    </li>
-    {{/each}}
+  {{#if isCurrent}}
+  <li>
+    <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none !bg-cyan-600 !text-white">{{page}}</a>
+  </li>
+  {{/if}}
+  {{#unless isCurrent}}
+  <li>
+    <a href="blogs.html?page={{page}}&category={{../../category}}&keyword={{../../keyword}}" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">{{page}}</a>
+  </li>
+  {{/unless}}
+  {{/each}}
 
-    {{#unless endAtLastPage}}
+    {{#unless ../endAtLastPage}}
     <li>
-      <a href="blogs.html?page={{../prevPage}}&category={{../category}}&keyword={{../../keyword}}" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-e-base text-sm w-9 h-9 focus:outline-none">
+      <a href="blogs.html?page={{../nextPage}}&category={{../category}}&keyword={{../keyword}}" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-e-base text-sm w-9 h-9 focus:outline-none">
         <span class="sr-only">Next</span>
         <svg class="w-4 h-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
       </a>
     </li>
     {{/unless}}
   </ul>
+  {{/pagination}}
 </nav>
 {{/with}}
 
@@ -383,6 +393,7 @@
   <script src="js/24880044.js"></script>
   <script src="js/api/database.js"></script>
   <script src="js/helpers/handlebars-formatDate-helper.js"></script>
+
   <script>
     (async function () {
       if (typeof _supabase !== 'undefined') {
