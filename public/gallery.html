@@ -42,9 +42,6 @@
         .read-more{
           @apply !text-cyan-600 underline text-sm;
         }
-        footer a:not(.active) {
-  @apply !text-white;
-}
     }
     </style>
 </head>
@@ -110,7 +107,8 @@
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
-              <a href="index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a>
+              <a href="index.html"
+                class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0 md:hover:text-cyan-600! ">Home</a>
             </li>
             <li>
               <a href="about.html"
@@ -220,49 +218,49 @@
   <!--Footer-->
   <footer class="w-full bg-[url('images/bg-footer.gif')] bg-repeat bg-gray-600 text-white text-center py-4">
     <nav class="max-w-7xl mx-auto flex items-center justify-center p-4">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:gap-x-8 rtl:space-x-reverse md:mt-0 ">
         <li>
           <a href="index.html"
-            class="block py-2 px-3 text-white rounded md:bg-transparent md:text-fg-brand md:p-0">Home</a>
+            class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:hover:text-pink-300!">Home</a>
         </li>
         <li>
           <a href="about.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent">About</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">About</a>
         </li>
         <li>
           <a href="gallery.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent  active"
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!  active"
             aria-current="page">Gallery</a>
         </li>
         <li>
           <a href="blogs.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent">Blogs</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">Blogs</a>
         </li>
         <li>
           <a href="contact.html"
-            class="block py-2 px-3 text-heading rounded md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-pink-300! md:dark:hover:bg-transparent">Contact</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">Contact</a>
         </li>
         <li class="isLogout">
           <a href="register.html"
-            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Register</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">Register</a>
         </li>
         <li class="isLogin">
           <a href="#.html" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent">Profile</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">Profile</a>
         </li>
         <li class="isLogout">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-cyan-600! md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Login</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300!">Login</a>
         </li>
         <li class="isLogin">
           <a href="login.html"
-            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:hover:text-cyan-600! md:dark:hover:bg-transparent logout-btn">Logout</a>
+            class="block py-2 px-3 text-white! rounded md:border-0 md:p-0 md:hover:text-pink-300! logout-btn">Logout</a>
         </li>
       </ul>
       </div>
       </div>
     </nav>
-    <div class="text-center">Copyright &copy; 2026 by 244880044 - Le Thi My Ngoc </div>
+    <div class="text-center">Copyright &copy; 2026 by 24880044 - Le Thi My Ngoc </div>
   </footer>
   <!-- HandlebarJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
