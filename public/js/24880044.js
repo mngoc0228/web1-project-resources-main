@@ -10,9 +10,12 @@ function renderView(templateId, viewId, data) {
 }
 function handleLogoutButton() {
     document.querySelectorAll(".logout-btn").forEach((btn) => {
-        btn.onclick = async () => {
+        btn.onclick = async (event) => {
+            event.preventDefault();
+
             try {
                 await supabaseLogout();
+                window.location.href = btn.href;
             } catch (error) {
                 alert(`Logout Error: ${error.message}`);
             }
